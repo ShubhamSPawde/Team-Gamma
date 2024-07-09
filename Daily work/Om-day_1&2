@@ -1,0 +1,52 @@
+% PYTHON VIRTUAL ENVIRONMENT
+
+% Let’s take an example to understand virtual environment : 
+% There are 2 clients of Ram. Both of them wants a website to be created from Ram, but on one condition client 1 [A] 
+% wants his website to be created from Django’s older version and client 2[B] wants his website to be created from Django’s newer version. 
+% Now if, Ram installs older version first and then the newer version later on then the newer version will 
+% replace the older version and now only the 
+% newer version will be present. So, creating a virtual environment will be the solution for this problem. 
+
+% Virtual Environment is a self-contained directory tree that contains a Python installation for a particular 
+% version of Python, plus a number of additional packages.
+
+% Creating virtual environment : python -m venv {directory name} [vnev  virtual environment module]
+% Activating : {directory name}\Scripts\activate
+% Deactivatation : deactivate
+% Installing package : python -m pip install {package name} 
+% if specific version then  python -m pip install {package name}==version
+% Unistalling : python -m pip uninstall {package name}
+% Package info : python -m pip show {package name}
+% All installed packages : python -m pip list
+% Saving package versions to a file : python -m pip freeze > file name
+% Installing packages from file : python -m pip install -r file name
+
+% Why to use Virtual Environment : 
+% 1.	To avoid too many files, packages making the operating system to run slow.
+% 2.	Avoids dependency conflicts : as in case of clients A & B following command must be used : 
+% 	mkdir client_A 
+% 	cd cliet_A
+% 	python -m venv client_A
+% 	client_A/Scripts/activate
+% 	python -m pip install Django==2.2.26
+% 	deactivate
+% Similar for the new client.
+
+
+% IDE [Integrated Development Environment]
+
+% An integrated development environment (IDE) is a program dedicated to software development. 
+% IDEs integrate several tools specifically designed for software development.
+% Tools are : 1. Editor for coding
+%                   2. Execution and debugging tools
+%                   3. Source control
+% Types of IDE’s : 
+% 1.	Local IDE : Users install and run IDE on their local machine.
+% 2.	Cloud IDE : Users use cloud IDEs to write, edit, and compile code directly in the browser so that 
+% they don't need to download software on their local machines.
+% Examples of IDE’s : 
+% 1.	VS code
+% 2.	Eclipse + PyDev
+% 3.	Sublime Text
+% 4.	Vim
+% 5.	PyCharm
