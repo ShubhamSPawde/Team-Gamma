@@ -1,0 +1,35 @@
+VIRTUAL ENVIRONMENT
+
+A virtual environment in Python is like a self-contained sandbox where you can install packages and dependencies for a specific project, isolated from your global Python installation and other projects. This isolation helps avoid conflicts between different projects that might require different versions of the same library.Virtual Environment is a self-contained directory tree that contains a Python installation for a particular version of Python, plus a number of additional packages.
+*Here's why virtual environments are useful:
+Dependency Management:
+Each project can have its own set of dependencies, even if they conflict with other projects.
+Cleanliness:
+Keeps your global Python installation clean and free from project-specific packages.
+Reproducibility:
+Makes it easier to share your project with others 
+also the packages and the dependencies do not collide with the global python environment
+
+
+
+
+list compresions :
+List comprehension in Python is a concise way to create lists based on existing iterables like lists, tuples, or strings. It provides a more readable and efficient alternative to using traditional for loops.
+lambda function,regular expresions..etc
+
+
+
+What is a IDE(Integrated development enviroment)?
+IDE stands for Integrated Development Environment it's a software application that combines common developer tools into a single graphical user interface (GUI). IDEs help programmers and software developers be more productive by integrating features like software editing, building, testing, and packaging into a simple-to-use tool. 
+Ide's can also provide us the features such as auto complete , error explanation, debugging , error possible solutions
+
+Local IDEs: Developers install and run local IDEs directly on their local machines.5
+
+Cloud IDEs: Developers use cloud IDEs to write, edit, and compile code directly in the browser so that they don't need to download software on their local machines. Cloud IDEs are web-based platforms hosted on remote servers and can facilitate collaborative development by enabling remote access to projects.Collaboration, Users can share notebooks and others can edit and run code in real-time
+
+eg=VS code,sublime text,google colab
+
+
+
+python interpreter=It is a tool that helps us to run the code but unlike complilers it builds the code line-by-line
+it interpreter is a computer program that converts each high-level program statement into machine code. it translates the command that you write out into code that the computer can understand
