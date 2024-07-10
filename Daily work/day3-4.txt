@@ -1,0 +1,65 @@
+There are various advance features in an IDE(integrated development environment)
+
+User-Friendly Interface
+Code Debugging Tools
+Language Support
+Extensibility
+Version Control Integration
+Code Autocompletion
+Built-In Terminal
+Code Analysis and Refactoring
+
+
+
+User-Friendly Interface:The interface should be user-friendly, and attractive. A development environment with confusing interface can hamper your productivity and increase frustration.
+
+Language Support:Whether you're a Python guru or a Java aficionado, having an IDE that accommodates your preferred language is essential
+
+Code Debugging Tools:Bugs are an inevitable part of software development,a code debugger is, which enable you to walk through your code easily, pinpointing and resolving problems.
+
+ Extensibility:Look for IDEs that support plugins or extensions like verification tools, common messengers, templates, etc.his feature lets you tailor your development environment by adding or removing functionality as per your requirements.
+
+ Version Control Integration:An IDE integrated with version control systems like Git can streamline the development workflow. It allows for easy code sharing, tracking changes, and managing collaborative projects.
+
+ Built-In Terminal:Switching between your IDE and a separate terminal window can disrupt your workflow. With an IDE that includes a built-in terminal
+
+Linting:
+it is a process of the text highlighting when coding if we encounter any errors and the brief is given below]:-
+Linting is a process for identifying bugs and stylistic errors in your code. The process is carried out by analysis tools called ’linters’, which are widely available for every major programming language. Linters will flag issues and style violations in your code, sort of like a spell checker!
+some of the features of linting?
+Debugging: A really nice feature of linters is the ability to flag bugs in your code without needing to run it (static analysis). Plus, readable code is much easier to debug!
+Consistency: In a large coding project consisting of many scripts, it helps to use a consistent style throughout. This can be especially challenging when working with a large team. Incorporating linters into your workflow (pre-commit, etc) will be a big help!
+Self-improvement: Getting into the habit of regularly checking your code for stylistic errors will make you a better programmer. Over time you will find that you are becoming less reliant on linters!
+Readability:it makes the code more readable and easy to understand,more over the code which is randomly writen will e not good-looking 
+
+
+Pylint,Flake8
+Pylint: looks for errors, enforces a coding standard that is close to PEP8, and even offers simple refactoring suggestions.
+Flake8: wrapper around PyFlakes, pycodestyle and McCabe; this will check Python source code for errors and violations of some of the PEP8 style conventions.
+It should be noted that Flake8 does not, by default, look for as many PEP8 violations as Pylint (unless you install some plugins). However it can still be beneficial to work with both linters in your project, as we will show below.
+
+Flake8
+Flake8 is a Python linting library that basically wraps three other linters, PyFlakes, pycodestyle and Ned Batchelder’s McCabe Script. It’s one of the better linters out there that has very low false positive rate. It checks your code base against PEP8 programming style, programming errors (like “library imported but unused” and “Undefined name”) and cyclomatic complexity.
+
+Black
+Black is known as the uncompromised Python code formatter. Unlike flake8 or pycodestyle, it doesn’t nag you when there are style inconsistencies. It just fixes them for you. Black does not have a lot of options to tinker with and has a lot of opinion on how your code should look and feel. You might not always agree with the decisions that black takes for you but if you can get along with the style that black imposes on you, it can take care of the unnecessary hassles of formatting your codes to keep it conistent across multiple projects or organization.
+
+
+
+
+Challenges in Debugging
+There are a lot of problems at the same time as acting the debugging. These are the following:
+
+Debugging is finished through the individual that evolved the software program and it’s miles difficult for that person to acknowledge that an error was made.
+Debugging is typically performed under a tremendous amount of pressure to fix the supported error as quick as possible.
+It can be difficult to accurately reproduce input conditions.
+Compared to the alternative software program improvement activities, relatively little research, literature, and formal preparation exist in the procedure of debugging.
+
+Backtracking
+This is additionally a reasonably common approach. during this approach, starting from the statement at which an error symptom has been discovered, the source code is derived backward till the error is discovered. 
+
+Cause Elimination Method
+In this approach, a listing of causes that may presumably have contributed to the error symptom is developed and tests are conducted to eliminate every error.
+
+Program Slicing
+This technique is analogous to backtracking. Here the search house is reduced by process slices. A slice of a program for a specific variable at a particular statement is that the set of supply lines preceding this statement which will influence the worth of that variable.
