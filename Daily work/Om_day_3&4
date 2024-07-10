@@ -1,0 +1,45 @@
+<!-- Linting is the automated checking of your source code for programmatic and stylistic errors. This is done by using a lint tool(linter). A lint tool is a basic static code analyzer.
+
+Linting is important to reduce errors and improve the quality of our code. Linting is like automated check of code, it should be done before code reviews and testing. Linting a code depends on the programming language which is used beacuse linting is very effective for Python, JS since these are interpreted languages they don’t have a compiling phase. So, for interpreted languages, linting is effective for consistent coding style and solving basic code errors. But for C,C++ these being complex languages which require a lot of code analysis, Linting may not be as effective.
+
+Examples : 
+1.	Pylint (Python code)
+2.	Cppcheck (C,C++ code)
+3.	Checkstyle(Java code)
+
+
+PEP 8 (Python Enhancement proposal) is a style guide for python code. It helps python programmers write consistent and readable code.
+
+Rules by PEP 8 for various things involved in a code : 
+	Naming conventions :  
+1.	Class names : Start with Capital letter and don’t separate words
+2.	Constant names : Use upper-case
+3.	Variable, function, method, module names : use lower case and separate words with an underscore symbol.
+4.	Package name : use short, lowercase word and don’t separate words.
+	Use descriptive words for variable, function names for what the object stands for.
+•	Whitespaces : 
+o	Surround top-level functions and classes with two blank lines
+o	Surround method definitions inside of classes with one blank line.
+•	Coments : 
+o	Block Comments
+o	Inline Comments
+There are various other rules by PEP 8 for many other things present in a code.
+
+Flake8 performs static analysis based on PEP8, it does the following : 
+1.	Solves errors & syntax issues
+2.	Removes bugs if any
+3.	Follows rules guided by PEP8.
+
+Black is a widely adopted code style, it does : 
+1.	Consistent and clean coding style
+2.	Minimal required configuration.
+
+Mypy is a python linter that catches programming errors by analyzing the code before/without running the code.
+
+Debugging is the process of identifying and rectifying errors in the code.
+Techniques : 
+1.	Understanding the problem : Before making changes in the code, it is important to know what is the problem you are trying to solve. Debugging without knowing the problem will waste time.
+2.	Backtracking : Start from where the problem begun and work backwards to find out the problem.
+3.	Debugging Tools : Use tools such as : Chrome DevTools, Testsigma, Airbrake, dbForger.
+4.	Isolation : Techniques such as commenting out code, using print statements, or isolating components can help you isolate the problem area quickly. -->
+ 
