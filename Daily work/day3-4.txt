@@ -63,3 +63,101 @@ In this approach, a listing of causes that may presumably have contributed to th
 
 Program Slicing
 This technique is analogous to backtracking. Here the search house is reduced by process slices. A slice of a program for a specific variable at a particular statement is that the set of supply lines preceding this statement which will influence the worth of that variable.
+
+
+
+
+Key Bindings:
+Each key binding requires two keys, "keys" and "command". To pass args to a command, the "args" key should be specified.The "keys" value must be an array of strings, where each string contains a key press, comprised of a key and any modifiers. 
+eg={
+    "keys": ["escape"],
+    "command": "noop"
+}
+
+Menu:
+DOCUMENTATION TOPMenus
+Menus in Sublime Text are defined by files ending in .sublime-menu. Menus use JSON, with the top-level structure being an array. Each binding is a JSON object containing information to define the text of the menu entry and what action it should perform.
+
+Example
+
+Entries
+
+Available Menus
+
+Adding to Submenus
+
+Customization
+
+Example
+The following is an example of the format of a .sublime-menu file.
+
+[
+    {
+        "caption": "File",
+        "mnemonic": "F",
+        "id": "file",
+        "children":
+        [
+            { "command": "new_file", "caption": "New File", "mnemonic": "N" },
+
+            { "command": "prompt_open_file", "caption": "Open File…", "mnemonic": "O", "platform": "!OSX" },
+            { "command": "prompt_open_folder", "caption": "Open Folder…", "platform": "!OSX" },
+            { "command": "prompt_open", "caption": "Open…", "platform": "OSX" }
+        ]
+    }
+]
+Entries
+Each menu entry is a JSON object with one or more keys. The list of supported keys includes:
+
+"caption"
+The text of the menu entry.
+
+"mnemonic"
+The character to use as the key to press to activate the entry. Only applies to Windows and Linux. Must match the case of the character in the "caption".
+
+"command"
+A string of the command to execute when the entry is activated.
+
+"args"
+A JSON object of args to send to the command.
+
+"children"
+A JSON array of entries to create a submenu from.
+
+"id"
+A unique string for the menu entry. Used for menu entries with "children" to allow adding additional child entries.
+
+"platform"
+One of the strings: "OSX", "!OSX", "Windows", "!Windows", "Linux" or "!Linux". Controls what platforms the entry is shown on.
+
+Each menu entry requires at minimum, the key "caption" for a non-functionality entry, or "command" for an entry that performs an action.
+
+Available Menus
+Sublime Text has seven menus that may be customized:
+
+Main.sublime-menu
+Primary menu for the application.
+
+Side Bar Mount Point.sublime-menu
+Context menu for top-level folders in the side bar.
+
+Side Bar.sublime-menu
+Context menu for files and folders in the side bar. Has “magic” args for passing file and folder names to commands.
+
+Entries with an arg "files": [] will be enabled for files and will pass file names to the command via the arg files. Entries with an arg "dirs": [] will be enabled for folders and will pass file names to the command via the arg dirs. Entries with an arg "paths": [] will be enabled for files and folders and will pass file and folder names to the command via the arg paths.
+
+Tab Context.sublime-menu
+Context menu for file tabs
+
+Context.sublime-menu
+Context menu for text areas
+
+Find in Files.sublime-menu
+Menu shown when clicking the ... button in Find in Files panel
+
+Widget Context.sublime-menu
+Context menu for text inputs in various panels. Technically this file name can be changed via the context_menu setting inside of Widget.sublime-settings.*
+
+
+
+
