@@ -1,12 +1,23 @@
 <!-- Linting is the automated checking of your source code for programmatic and stylistic errors. This is done by using a lint tool(linter). A lint tool is a basic static code analyzer.
 
+Linting does a lot of things like : 
+1.	Flagging bugs in your code from syntax errors.
+2.	Giving warnings when your code may not be intuitive.
+3.	Providing suggestions for common best practices.
+4.	Keeping a consistent coding style.
+5.	Linters keeps a track of TODO’s (comments which indicate that a specific setion of code needs to be completed or improved in future) & FIXME’s(comments which indicate that the current implementation is incorrect and needs to be fixed).
+And many more…
+
 Linting is important to reduce errors and improve the quality of our code. Linting is like automated check of code, it should be done before code reviews and testing. Linting a code depends on the programming language which is used beacuse linting is very effective for Python, JS since these are interpreted languages they don’t have a compiling phase. So, for interpreted languages, linting is effective for consistent coding style and solving basic code errors. But for C,C++ these being complex languages which require a lot of code analysis, Linting may not be as effective.
 
 Examples : 
 1.	Pylint (Python code)
 2.	Cppcheck (C,C++ code)
 3.	Checkstyle(Java code)
+4.	ESLint, JSHint (JavaScript code)
+5.	Stylelint(CSS code)
 
+Formatting the code is making the code readable for team members when working on a project. The reader must be able to understand the gross structure of the code instantly. 
 
 PEP 8 (Python Enhancement proposal) is a style guide for python code. It helps python programmers write consistent and readable code.
 
@@ -21,11 +32,19 @@ Rules by PEP 8 for various things involved in a code :
 o	Surround top-level functions and classes with two blank lines
 o	Surround method definitions inside of classes with one blank line.
 •	Coments : 
-o	Block Comments
-o	Inline Comments
+o	Block Comments -  Use for a smaller section of code.
+o	Inline Comments - Use for a single statement in a piece of code.
+•	Line length & Line breaks :
+o	PEP 8 suggests that all lines should be limited to 79 characters. Limitng the line length makes the code more readable.
+o	If we need to use line break around binary operators like +,-,* then use it before the operand. 
+Ex: total = (first 
+            + Second
+            -Third)
+•	Indentation : Use four spaces to indicate indentation.
+
 There are various other rules by PEP 8 for many other things present in a code.
 
-Flake8 performs static analysis based on PEP8, it does the following : 
+Flake8 performs static analysis based on PEP8. It is a tool that combines pyflakes, pycodestyle and a debugger, it does the following : 
 1.	Solves errors & syntax issues
 2.	Removes bugs if any
 3.	Follows rules guided by PEP8.
@@ -33,6 +52,9 @@ Flake8 performs static analysis based on PEP8, it does the following :
 Black is a widely adopted code style, it does : 
 1.	Consistent and clean coding style
 2.	Minimal required configuration.
+3.  Takes care of minor stylistic & structural issues.
+If you want to use Black, you need to have Python 3.60+ or it won’t run.
+
 
 Mypy is a python linter that catches programming errors by analyzing the code before/without running the code.
 
