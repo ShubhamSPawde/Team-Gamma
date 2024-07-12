@@ -1,0 +1,27 @@
+<!-- VERSION CONTROL SYSTEM
+
+Version Control or Source Control is tracking & managing changes made to the software code. Version Control Systems are software tools that help software teams manage changes made to the source code over time.
+Version Control Software keeps track of every modification/change made to the code so that if a mistake has occurred the developer can compare the earlier code and try to solve the mistake.
+
+Git is a popular open-source version control system that lets you manage & keep track of your source code history. GitHub is a cloud-based hosting service that lets you manage Git repositories/folders. When developers work on open-source projects they use Git and GitHub helps to manage them effectively.
+Git Commands : 
+1.	git clone - clones a repository on our local machine.
+2.	git add file name - adds new or changed files in your working directory to the Git staging area.
+3.	git commit -m “some message” - It is the record of change.
+4.	git status - displays the state of the code.
+5.	Git clean - removes untracked files from the working directory.
+6.	Git push origin main - uploads local repository content to GitHub repository where origin is the name of local repository & main is the name of branch where you want to upload file contents.
+7.	git branch - To check current branch
+8.	git branch -M name - To rename branch.
+9.	git checkout branch name - To get out of one branch and enter new branch.
+10.	git checkout -b new branch name - to create new branch and enter that branch.
+11.	git branch -d branch name - to delete branch.
+12.	git diff branch name - to compare commits, branches, files & more.
+13.	Git merge branch name - To merge 2 branches.
+14.	Pull request - It lets you tell others about the changes you have pushed to a branch in a repository on GitHub. 
+command - git pull origin main
+
+
+Workflow: Github repository --> clone -->  make changes in code --> add to staging area --> commit changes --> push -->
+
+
