@@ -17,7 +17,7 @@ Examples :
 4.	ESLint, JSHint (JavaScript code)
 5.	Stylelint(CSS code)
 
-Formatting the code is making the code readable for team members when working on a project. The reader must be able to understand the gross structure of the code instantly. 
+Formatting the code is making the code readable for team members when working on a project. The reader must be able to understand the gross structure of the code instantly.
 
 PEP 8 (Python Enhancement proposal) is a style guide for python code. It helps python programmers write consistent and readable code.
 

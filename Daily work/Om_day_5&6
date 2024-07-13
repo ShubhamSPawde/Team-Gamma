@@ -24,4 +24,33 @@ command - git pull origin main
 
 Workflow: Github repository --> clone -->  make changes in code --> add to staging area --> commit changes --> push -->
 
+<!-- branching, merging, and conflict resolution causes : 
+1.	Modifications: When two or more users make conflicting changes to the same section of code.
+2.	Deleted File/code : If one branch deletes a section of code and another branch trie to modify the same section of code.
+3.	Branch divergence : If two branches have diverged a lot and Git cannot decide on how to integrate the changes.
+4.	Differences in line endings, whitespaces.
+
+SOLUTIONS :
+
+1.	When conflicts arise Git marks the conflicting section by : 
+<<<<< HEAD 
+Code from current branch
+-----
+Code from branch being merged
+>>>>>>>> branch – name
+
+Resolve conflicts by correct code or combining changes as necessary, then mark file as resolved : 
+git add conflicted_file
+git commit -m “resolved merge conflict in conflicted_file”
+
+2.	Rebasing can help you apply your changes on top of latest commits from main branch, thus forming a linear history.
+git checkout feature-branch
+git rebase main
+
+3.	Configure Git to handle line endings : 
+Git configure --global core.autocrlf true
+
+4.	Other solutions include communication & coordination with team members regularly, regularly merging the feature branch into main branch. -->
+
+
 
