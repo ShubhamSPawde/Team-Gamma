@@ -1,0 +1,35 @@
+<!-- Repository creation and management on github
+
+Creation of new repository : 
+1.	On top right corner, there’s an option of creating a new repository.
+2.	Name the repository.
+3.	Choose repository visibility whether private or public.
+4.	Give some description of the repository.
+5.	Initialize the repository with a README file.
+A New Repository has been created.
+
+In README file you can describe your project in detail, or add some documentation about the project. The contents of README file are shown on the front page of the Repository.
+Setting up Repository Locally : 
+1.	Cloning the repository : On the repository, copy the path of your repository from the green “Code” button and open terminal and paste it, it will look something like this : https://github.com/username/repositoryname.git
+2.	Change directory : cd repository name
+3.	Add file with some content : echo “hello world” > newfile name
+git add newfile name
+4.	Commit : git commit -m “Some message”
+5.	Push : git push origin main
+
+Management of repositories : 
+1.	Forking : It allows for creating a copy of a repository under the GitHub account which can be modified without affecting the original.
+2.	Cloning : When you create a repository on GitHub.com it exists as a remote repository. You can clone your repository to create a local copy on your computer.
+3.	Creating repository from template
+4.	Transferring a repository
+5.	Deleting a repository
+
+Utilizing pull requests for code reviews and collaboration.
+
+Pull Requests facilitate code reviews and collaboration. It allows developers to make changes to the code, discuss the changes and make decisions in unison.
+1.	After making the necessary changes in the code present in the feature branch push that branch.
+2.	On the repository front page, click on 'Pull request' then 'New pull request' and then 'Create a pull request'.
+3.	Provide a very detailed description of the branch you pulled a request to since your team members would find out easy to locate the changes made.
+4.	Reviewers will review the code and comment accordingly.
+5.	The project head will ‘merge pull request’. -->
+
