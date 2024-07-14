@@ -28,3 +28,14 @@ Choose the appropriate merging option:
 Merge Commit: Creates a merge commit and retains the commit history.
 Squash and Merge: Combines all commits into a single commit.
 Rebase and Merge: Rebases the commits from the PR on top of the base branch.
+
+
+
+CI/CD stands for continuous integration and continuous delivery/deployment, and it's a software development practice that uses Git to automate the integration of code changes from multiple developers into a single codebase:
+
+Continuous integration (CI)
+Developers frequently commit their work to a central code repository, like GitHub or Stash. After that, automated builds and tests are run.
+
+
+Continuous deployment (CD)
+Code changes are automatically deployed to production after passing automated tests and meeting predefined criteria. This ensures reliable and frequent software releases. 
