@@ -1,0 +1,30 @@
+Collaborative Development Using GitHub
+
+Step 1: Initialize a New Project
+Go to Github and click the ‘+’ button in the rop right corner and select ‘New Repository’.
+Then fill out the Repository name and the Description fields. Keep it public, and do not “Initialize this repository with a README”. Don’t change anything else. Click “Create repository”. and our repo will be created
+
+then copy the lines starting with echo you will see and paste it in the terminal and you should be in your project directory
+This adds a ‘.git’ folder to your repo, connects you to your remote Github Repo and also gives you a ‘.gitignore’ fileand if you go to your Github Repo page, you’ll see the ReadMe that you intialized with and the reference to the first commit you made.
+
+Step 2: Setup Your Team
+go in the settings and add the collaborators once you add the collaborators can contribute in their branch. If you’re a collaborator, go to the Github Repo page, Git Clone the project, and cd into the directory. Don’t fork it! Forking will copy it in a new Repo to your Github page, but you don’t want that — you want to collaborate on the same Github Repo with your teammates.
+
+Step 3: Collaborating
+if you are not a collaborators then you can go on a repo you want to contribute and then fork that repo and then clone it in your device and then you can make your branch and then code in it and after the completion of the work then you can create a pull request to include it in the main.
+Branch
+To start, branches should always represent features. For example, if you want to add the ability for a user to login you should probably create a branch called “user_authentication” and in that branch you should only update what you need to to enable a user to login.
+
+Step 4: Push
+if you are doing/working on a project and doing a collaburation on a project and also finished your work on your branch then you can commit the work using Git desktop and then push origin and after which you can go on the repo click on compare and then create the pull request and then you can copy the pull request and then use it when ever you want
+
+Merging Pull Requests
+If you have the task to merge pull request then it can be vital,Merging pull requests (PRs) is an essential part of collaborative software development, ensuring that contributions from different team members are integrated into the main codebase. Here’s a step-by-step guide on how to merge pull requests effectively:
+
+Merge the Pull Request:
+
+On GitHub, navigate to the PR page.
+Choose the appropriate merging option:
+Merge Commit: Creates a merge commit and retains the commit history.
+Squash and Merge: Combines all commits into a single commit.
+Rebase and Merge: Rebases the commits from the PR on top of the base branch.
