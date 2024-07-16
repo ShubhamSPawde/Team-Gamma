@@ -1,0 +1,127 @@
+List:
+
+A list in Python is a versatile and commonly used data structure that allows you to store a collection of items.
+
+it is a literals in python 
+we can represent the list as l=[1,2,3,4,5] this is a simple list that has numbers a list is enclosed in [ ] bracteks and there are various key freatures in it:-
+
+Ordered: Lists maintain the order of elements in which they are added. This means you can access elements by their index (position) in the list.There is a fix index to each element.
+Mutable: Lists can be modified after creation. You can add, remove, change,extend  elements within a list.
+Heterogeneous: Lists can store elements of different data types. For example, a single list can contain integers, s`trings, and even other lists.
+Dynamic: Lists can grow or shrink in size as needed. You don't need to predefine the size of a list when you create it.
+Iterable: You can loop through the elements of a list using loops like for loops.
+Allow Duplicates: Lists can contain duplicate values.
+
+Tuple:
+Tuples are a fundamental data structure in Python used to store ordered collections of items. They are very similar to lists, but with one key difference: tuples are immutable. Once you create a tuple, you cannot modify its contents (add, remove, or change elements).
+
+it is a literals in python 
+we can represent the tuple as l=(1,2,3,4,5) this is a simple tuple that has numbers, a tuple is enclosed in [ ] bracteks and there are various uses in it:-
+Faster than lists:
+Since tuples are immutable, Python can optimize their memory allocation, making them slightly faster than lists in some cases.
+Data integrity:
+Immutability ensures that data remains constant throughout the program's execution, preventing accidental modifications.
+Can be used as keys in dictionaries:
+Unlike lists, tuples can be used as keys in dictionaries because they are hashable (due to their immutability).
+
+
+When to Use Lists,Tuples:
+When you need an ordered collection of items that should not be changed.
+For returning multiple values from a function.
+As dictionary keys (since they are immutable).
+For situations where immutability provides a performance benefit.
+
+
+
+Sets:
+Sets in Python are a fundamental data structure used to store unique, unordered collections of items. 
+it is a literals in python 
+we can represent the Set as l={1,2,3,4,5} this is a simple list that has numbers a sets is enclosed in { } bracteks and there are various key freatures in it:-
+Uniqueness:
+Sets automatically eliminate duplicate elements, ensuring that each element is present only once.
+Unordered:
+Sets do not maintain the order of elements. If you print a set, the order of elements might differ each time.
+Mutable:
+Sets are mutable, which means you can add or remove elements after creation.
+
+When to Use Sets:
+Removing Duplicates: Sets are excellent for removing duplicates from a list or other iterable.
+Membership Testing: Sets offer fast membership testing (checking if an element is present) compared to lists.
+Mathematical Operations: Sets are useful for performing mathematical operations like union, intersection, and difference.
+
+Dictionary:
+
+A dictionary is a kind of data structure that stores items in key-value pairs. A key is a unique identifier for an item, and a value is the data associated with that key. Dictionaries often store information such as words and definitions, but they can be used for much more.
+they are very useful when you want more info about values stored in a list or tuple you can give more info about what you store 
+it is a type literal collection
+we can represent it using { } brackets and in which {"key":"value"} the key and the value are seperated by :
+there are various methods in dictionary :
+clear(),popitem(),get(),copy(),keys(),values()
+they are usefull while using dictionary
+
+
+
+List comprehensions and generator expressions are powerful tools for efficient data manipulation in Python.
+how to decide in both?
+List Comprehensions: Use when you need the entire result set in memory for further operations.
+Generator Expressions: Use when memory efficiency is crucial, or you only need to iterate over the results once.
+filtering
+numbers = [1, 2, 3, 4, 5, 6]
+even_numbers = [x for x in numbers if x % 2 == 0]
+we can use this for filtering the even numbers
+
+Mapping:
+numbers = [1, 2, 3]
+squares = [x**2 for x in numbers]
+to print the square of the numbers list
+
+Combining Filtering and Mapping.
+numbers = [-2, -1, 0, 1, 2]
+positive_squares = [x**2 for x in numbers if x > 0]
+
+Nested Comprehensions
+matrix = [[1, 2, 3], [4, 5, 6]]
+flattened = [num for row in matrix for num in row]
+
+Generator expressions are evaluated on-demand, which is useful for processing large datasets or infinite sequences.
+Use Cases:
+When you need to iterate over a sequence only once.
+When memory is a concern, especially for large datasets.
+When you need to create infinite sequences.
+
+Decorators
+Decorators are a powerful feature in Python that allow you to modify the behavior 
+of functions or classes. They are often used for tasks like  
+logging,timing,authentication, and resource management.
+Purpose:
+Modify or enhance the behavior of functions or classes without directly changing 
+their source code.
+Common use cases:
+Logging function calls and arguments.
+Timing how long a function takes to execute.
+Caching function results for improved performance.
+Enforcing access control or permissions.
+Implementation:
+Using the @decorator_name syntax above the function or class definition.
+Creating higher-order functions that take a function as input and return a 
+modified function.
+
+
+Context Managers
+Context managers provide a way to manage resources efficiently by ensuring that  
+they are properly acquired and released. They are commonly used for file handling,
+database connections, and network sockets.
+You can create a context manager using a class that implements the __enter__ and 
+__exit__ methods:
+Purpose: Manage resources efficiently. They ensure that resources are properly 
+acquired and released, even if exceptions occur.
+Common use cases:
+Opening and closing files:
+Handling database connections.
+Acquiring and releasing locks.
+Temporarily changing directories.
+Implementation:
+Using the with statement and a context manager object.
+Creating a class with __enter__ and __exit__ methods.
+Using the @contextmanager decorator to create a context manager from a generator 
+function
