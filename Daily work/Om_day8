@@ -1,0 +1,129 @@
+; Lists are used to store multiple items in a single variable.
+; List items are ordered, changeable, and allow duplicate values.
+; Ex : fruits = [“Apple”, “banana”, “mango”, “orange”, “Watermelon”, “Ramphal”, “Kiwi”]
+; List items can be of any data types. Ex: world = [“India”, 7, True, “male”, 5]
+; List constructer - list() – fruit = ((“apple”, “mango”, “banana”))
+; To access an element from a list : print(fruits[1]) = banana 
+; print(fruits[-1]) = Kiwi
+; print(fruits[1:4]) = [‘banana’, ‘mango’, ‘orange’]
+; print(fruits[3:]) = [‘orange’, ‘Watermelon’, ‘Ramphal’, ‘Kiwi’]
+; print(fruits[:4]) = [‘Apple’, ‘banana’, ‘mango’, ‘orange’]
+; fruits.insert(3, “Sweet lemon”) – Item at index 3 will be replaced
+; print(fruits) = [‘Apple’, ‘banana’, ‘mango’, ‘Sweet lemon’, ‘Watermelon’, ‘Ramphal’, ‘Kiwi’]
+; fruits.append(“cherry”) – Item will be added at the end of the list
+; print(fruits) = [‘Apple’, ‘banana’, ‘mango’, ‘orange’, ‘Watermelon’, ‘Ramphal’, ‘Kiwi’, ‘cherry’]
+; Elements can be added from one list to another : first_list.extend(second_list) – print(first_list)
+; To remove an element from list : 
+; fruits.remove(“Watermelon”) – print(fruits) – List will be printed without Watermelon as an element
+; Using pop function you need to give the index number of element to be removed. ex : fruits.pop(2) if no argument is passed in pop() function 
+; like fruits.pop() then last element is removed.
+; del[] & pop() are similar.
+; del & clear() deletes the list completely.
+; Loop through a List : 
+; Veggies = [“Potato”, “Tomato”, “Cauliflower”]
+; For x in Veggies:
+; Print(x) output :    Potato
+;                      Tomato
+;                      Cauliflower
+; For i in range(len(Veggies)):                           i = 0
+; Print(Veggies[i])                                            while i < len(Veggies):
+;                                                                          Print(Veggies[i])
+;                                                                          i = i + 1
+
+; different examples : 
+; new = [x for x in Veggies if “t” in x]          This will print the items in Veggies 
+; print(new)                                               which contain the letter ‘t’
+
+; Set values in new with upper-case letters: new = [x.upper() for x in Veggies]
+
+; fruits = ["apple", "banana", "cherry", "kiwi", "mango"]
+; new = [x if "e" not in x else "hello" for x in fruits]
+; print(new)   Output : [‘hello’, ‘banana’, ‘hello’, ‘kiwi’, ‘mango’]
+
+; Sorting : fruits = [“orange”, “mango”, “kiwi”, “pineapple”, “banana”]
+;           fruits.sort()
+;           print(fruits)     Output = [‘banana’,’kiwi’,’mango’,’orange’,’pineapple’]
+; for descending order : fruits.sort(reverse == True)
+; for lower-case : fruits.sort(key == str.lower)
+; reverse list = fruits.reverse()
+; Copying list : new = fruits.copy()    or   new = list(fruits)  print(new)
+; Joining Lists : list1 = [1,2,“hello”] list2 = [“World” , 3, 4] list 3 = list1 + list2 print(list3)
+; Output : [1, 2, ‘hello’, ‘World’, 3, 4]
+; for x in list2:                  list1.extend(list2)
+;    list1.append(x)               print(list1)
+;    print(list1)
+
+
+; Tuple are used to store multiple values in a single variable.
+; Tuple items are ordered, unchangeable and allows duplicate values.
+; Colors = (“orange”, “green”, “blue”, “yellow”, “red”)
+; To create a tuple with only one element then, just add one value : colors = (“red”,)
+; Tuple constructer – colors = ((“orange”, “green”, “blue”, “yellow”, “red”))
+; Accessing an element from the tuple is same as accessing from list.
+; Ex : print(Colors[1])  Output : green
+; Once a tuple is created you cannot add, change or remove items of the tuple, Since Tuples are immutable. 
+; We can convert the tuple into list or add two tuples to make changes.
+; Ex :  Colors = (“orange”, “green”, “blue”, “yellow”, “red”)
+;         New = list(Colors)
+;         New[2] = “black”                     Output : (‘orange’, ‘green’, ‘black’, ‘yellow’, ‘red’)
+;         Colors = tuple(New)
+;         print(Colors) 
+
+
+; Colors = (“orange”, “green”, “blue”, “yellow”, “red”) 
+; new = list(Colors)
+; new.append(“white”)           Output : (‘orange’, ‘green’, ‘blue’, ‘yellow’, ‘red’, ‘white’)
+; Colors = tuple(new)
+; Print(Colors)
+
+; tuple1 = (“red”, “green”)
+; tuple2 = (“blue”,)                 Output : (‘red’, ‘green’, ‘blue’)
+; tuple1 += tuple2 
+; print(tuple1)
+
+; del keyword will delete the tuple completely.
+; count() : returns the number of times a specified value occurs in a tuple.
+; index() : searches the tuple for a specified value and returns the position of its location.
+
+; Sets are used to store multiple items in a single variable.
+; Sets items are unordered, unchangeable and does not allow duplicate values.
+; Brands = {“Tata”, “Reliance”, “Adani”, “Zomato”, “Flipkart”, “OYO”}
+; In a set, true is considered as 1 & false is considered as 0, and if both of them exists in a single set, they are considered as duplicates.
+; ex : set1 = {“green”, 3, True, “male”, 1}
+;      print(set1)                                     Output : {True, ‘male’, 3, ‘green’}
+; set constructer = set((“Tata”, “Adani”, “OYO”}
+; Elements cannot be accessed in Sets with reference to their index no or name, they need to go through loops.
+; ex : brands = {“Tata”, “OYO”, “flipkart”}                            Tata
+;       for x in brands:                                     Output :  OYO
+;           print(x)                                                   flipkart
+
+; brands = {“Tata”, “OYO”, “flipkart”}
+; print(“OYO” in brands)  #To check if OYO is present in brands set or not 
+;                           Output : True
+; add() – ex: brands = {“Tata”, “OYO”, “flipkart”}  
+;             brands.add(“Adani”)                      Output : {‘Tata’, ‘OYO’, ‘Adani’, ‘flipkart’}
+;             print(brands)           
+; ex: brands = {“Adani”, “OYO”} 
+;       new = {“Tata”, “flipkart”}          #new can also be declared as a list, tuple             
+;       brands.update(new)                     Output : {‘flipkart’, ‘OYO’, ‘Adani’, ‘Tata’}
+;       print(brands) 
+; remove() & discard() removes an item from the set, if the item doesn’t exists in the set, error is raised if remove() is used, if discard() is used, no error.
+; ex : brands = {“Tata”, “OYO”, “flipkart”}  brands.remove(“OYO”)  print(brands)
+; Output : {‘flipkart’, ‘Tata’}
+; pop() – removes a random element from the set.
+; clear() & del() – clears the whole set & deletes the whole set.
+; union() & update() – joins all items from both sets. Symbol | can also be used instead of union
+; ex : set1 = {‘a’, ‘b’, ‘c’}                                                    multiple sets can also be joined       
+;        set2 = {2, 4, 6}                                                      bigset = set1.union(set2,set3,set4)
+;        set3 = set1.union(set2)       #set3 = set1 | set2     bigset = set1 | set2 | set3
+;        print(set3)
+;       symbol | can be used to join only sets, while union() can join lists, tuples…
+; intersection() – keeps only the duplicate values. & symbol can be used to intersect only sets.
+; difference() – keeps the elements present in the first set only. Symbol – is used for difference in sets.
+; set1 = {“Tata”, “OYO”, “Adani”}
+; set2 = {“Adani”, “flipkart”, “Zomato”}         Output : {‘Tata’, ‘OYO’}
+; set3 = set1.difference(set2)
+; symmetric_difference() – keeps all items except duplicates. Symbol ^ is used for symmetric difference in sets only.
+; set1 = {“Tata”, “OYO”, “Adani”}
+; set2 = {“Adani”, “flipkart”, “Zomato”}         Output : {‘Tata’, ‘OYO’, ‘flipkart’, ‘Zomato’}
+; set3 = set1.symmetric_difference(set2) 
