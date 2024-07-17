@@ -127,3 +127,46 @@
 ; set1 = {“Tata”, “OYO”, “Adani”}
 ; set2 = {“Adani”, “flipkart”, “Zomato”}         Output : {‘Tata’, ‘OYO’, ‘flipkart’, ‘Zomato’}
 ; set3 = set1.symmetric_difference(set2) 
+
+; Dictionaries are used to store data values in key: values pairs.
+; A dictionary is a collection which is ordered, changeable and does not allow duplicates.
+; Dict = {“brand” : “Tata”, “model” : “Tata Indica”, “year” : 1998}
+; print(Dict)       Output : {‘brand’ : ‘Tata’, ‘model’ : ‘Tata Indica’, ‘year’ : 1998}
+
+; Dict = {“brand” : “Tata”, “model” : “Tata Indica”, “year” : 1998, “colors” : [“white”, “grey”]}
+; Dict constructer : dict(brand = “Tata”, model = “Tata Indica”, year = 1998}
+; Accessing Items :  dict = {“brand” : “Tata”, “model” : “Tata Indica”, “year” : 1998}
+;                                 x = dict[“model”]               # x = dict.get(“model”)
+;                                 print(x)                               Output : Tata Indica
+; x = dict.keys()  
+; print(x)           Output : dict_keys([‘brand’, ‘model’, ‘year’])
+
+; car = {“brand” : “Tata”, “model” : “Tata Indica”, “year” : 1998}
+; x = car.keys()
+; car[“color”] = “white”            Output : car_keys([‘brand’, ‘model’, ‘year’, ‘color’])
+; print(x)
+
+; car = {“brand” : “Tata”, “model” : “Tata Indica”, “year” : 1998}
+; x = car.values()
+; car[“year”] = 2000                   Output : dict_values([‘Tata’, ‘Tata Indica’, 2000])
+; print(x)
+
+; items() – return each item in a dictionary as tuples in a list.
+; ex : car = {“brand” : “Tata”, “model” : “Tata Indica”, “year” : 1998}
+; x = car.items()
+; car[“color”] = “grey”          Output : car_items([(‘brand’,’Tata’), (‘model’,’Tata Indica’), (‘year’,1998), (‘color’,’grey’)])                             
+; print(x)                                                     
+; update() – updates the dictionary with items from given argument, if item doesn’t exists then new item will be added.
+; ex : car.update({“year” : 2000})
+;        car.update({“color” : “white”})
+; pop() – removes item with specified key name. ex : car.pop(“model”)
+; popitem() – removes the last inserted item.
+; del – removes item with specified key name & can also delete the dictionary.
+;  ex : del car[“brand”] & del car
+; clear() – empties the whole dictionary
+; for x in car:                                            for x in car:
+;   print(x)   #prints the keys                              print(car[x])      #prints the values
+
+; copy() – ex : new = car.copy()         # new = dict(car) can also be used.
+;               print(new)
+
