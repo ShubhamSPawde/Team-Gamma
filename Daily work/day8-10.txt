@@ -113,15 +113,26 @@ they are properly acquired and released. They are commonly used for file handlin
 database connections, and network sockets.
 You can create a context manager using a class that implements the __enter__ and 
 __exit__ methods:
-Purpose: Manage resources efficiently. They ensure that resources are properly 
+
+*The with statement:
+The most common way to use context managers is with the with statement.
+It simplifies the resource management by automatically releasing them when we are done 
+with open('myfile.txt', 'r') as f:
+    contents = f.read() opens the file with 'with' in read mode
+
+1) __enter__ method:
+When the with statement is executed, the context manager's __enter__ method is called. This method typically acquires the resource (like opening a file) and returns it so you can use it within the with block.
+2)__exit__ method:
+After the code within the with block executes (or if an exception occurs), the __exit__ method is called. This method is responsible for releasing the resource (like closing the file).
+*Purpose: Manage resources efficiently. They ensure that resources are properly 
 acquired and released, even if exceptions occur.
-Common use cases:
+*Common use cases:
 Opening and closing files:
 Handling database connections.
 Acquiring and releasing locks.
 Temporarily changing directories.
-Implementation:
-Using the with statement and a context manager object.
-Creating a class with __enter__ and __exit__ methods.
-Using the @contextmanager decorator to create a context manager from a generator 
-function
+
+Benefits:
+Cleaner code:short code hence
+Exception handling: Context managers gracefully handle exceptions that occur within the with block.
+Readability: The with statement makes it clear where resources are being acquired and released.
