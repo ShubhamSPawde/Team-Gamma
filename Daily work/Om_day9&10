@@ -25,3 +25,32 @@
 # Generator Exp occupies less size than List Comprehension.
 # In List comprehension all the elements are stored in memory and we can get quick access to them. 
 # In generator exp it saves the memory but requires entire list to be generated each time it is called to get the next element.
+
+# Decorators
+# Decorators are a very good feature which allows us to modify or extend the behaviour of functions  or classes. 
+# It provides a clean way to implement cross – cutting concerns(aspects of program that affects multiple parts of an application) such as 
+# logging, authentication & caching without affecting the core functionality.
+
+# Decorators are applied to function or classes using @ with decorator’s name.
+# Ex : @staticmethod
+#        def my_static_method():
+
+# Uses :     1. Performance measurement
+#            2. Authentication and Authorization
+#            3. Logging and error handling
+
+# Context Managers
+# Context Managers help manage resources such as file handles, sockets, database connections ensuring that they are properly acquired and released. 
+# They simplify the process of manging resources by automatically handling setup & teardown operations, making the code more readable and less error-prone.
+
+# Context managers are used in conjunction with the ‘with’ statement.
+# Ex: with open(‘file.txt’, ‘r’) as file:
+#             content = file.read()
+#             print(content)
+
+# The ‘contextlib’ module provides a simpler way to create context managers using the @contextmanager decorator and yield statement.   
+
+# Uses : 1. File Handling & I/O operations
+#            2. Database connections & transactions
+#            3. Locks and synchronization in multithreading 
+
