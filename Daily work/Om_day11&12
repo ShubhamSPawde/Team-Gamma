@@ -29,3 +29,55 @@
 # -	name, price & color are attributes.
 # -	To access the attributes the dot notation is used.
 # -	__repr__ method defines a string representation of an object that is meant to be clear & useful for developers.
+
+# Encapsulation is the process of preventing others(mainly clients) from accessing properties, which can only be accessed through specific methods.
+# Private attributes are inaccessible attributes. For a private attribute we need to use two underscores ‘__’ before the attribute name.
+# Ex : Let’s introduce a private attribute in our previous example : __discount
+
+# class Car:
+#     def __init__(self, name, price, color):
+#         self.name = name
+#         self.price = price
+#         self.color = color
+#         self.__discount = 0.20
+        
+#     def __repr__(self):
+#         return f"Car: {self.name}, price: {self.price}, color: {self.color}"
+
+# car1 = Car('Car 1', 50000, 'Black')
+                                                                     
+# print(car1.name)
+# print(car1.price)
+# print(car1.color)
+# print(car1.__discount)
+
+# On running the above program, everything gets printed except discount, we need to use getter & setter methods to access private attributes.
+# We make price property private, using setter method assign discount attribute and using getter function we get the price attribute : 
+
+# class Car:
+#     def __init__(self, name, color, price):
+#         self.name = name
+#         self.color = color
+#         self.__price = price
+#         self.__discount = None
+
+#     def set_discount(self, discount):
+#         self.__discount = discount
+
+#     def get_price(self):
+#         if self.__discount:
+#             return self.__price * (1 - self.__discount)
+#         return self.__price
+            
+#     def __repr__(self):
+#         return f"Car: {self.name}, color: {self.color}, price: {self.get_price()}"
+
+# car1 = Car('Car 1', 'Black', 50000)
+# car1.set_discount(0.20)
+# car2 = Car('Car 2', 'White', 65000)
+                                                                     
+# print(car1)                                                           
+# print(car2)
+
+# Output :  Car: Car 1, color: Black, price: 40000.0
+#           Car: Car 2, color: White, price: 65000
