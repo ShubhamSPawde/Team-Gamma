@@ -1,0 +1,54 @@
+# Lambda Functions are those functions which can have any number of arguments but only one expression, which is evaluated and returned. 
+# They are often used for short, one-time useable functions.
+# They are defined using the ‘lambda’ keyword. Let’s see an example :
+
+# def evaluate(x, y, z):
+#     return x-y*z
+
+# evaluate_lambda = lambda x, y, z: x-y*z
+# print(evaluate_lambda(9, 2, 3))
+
+# Applications : 1. Sorting
+#                2. Event Handling 
+
+# Map Function applies a specific function to all items in an input list, tuple etc. and  returns a map object which can be converted to a list, tuple etc. 
+# Ex : 
+# def squareroot(x):
+#     return x ** 0.5
+# nos = [4, 9, 16, 25, 36]
+# square_root_nos = map(squareroot, nos)
+# square_root_lambda = map(lambda x: x ** 0.5, nos)
+# print(list(square_root_lambda))
+
+# Appliactions : 1. Data Transformation
+#                 2. String Operations
+#                 3. Mathematical operations 
+
+# Filter function filters out the elements that don’t meet a certain condition. It constructs an iterator from elements of an iterable 
+# for which a function returns true.
+# Ex : 
+# def is_even(x):
+#     return x % 2 == 0
+
+# numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+
+# even_numbers = filter(is_even, numbers)
+# print(list(even_numbers))
+
+# Applications : 1. Data Cleaning
+#                2. Conditional filtering
+
+# Reduce function is used to apply a particular function passed into its argument to all the elements present in a list, tuple etc. 
+# and returns a single value. This function is a part of ‘functools’ module.
+# Ex: 
+# from functools import reduce 
+
+# def multiply(a, b):
+#     return a * b
+
+# numbers = [1, 2, 3, 4, 5]
+# multi_numbers = reduce(multiply, numbers)
+
+# multi_numbers_lambda = reduce(lambda a, b: a * b, numbers)
+# print(multi_numbers_lambda)
+# Applications : Addition, Product, finding maximum of given numbers.
