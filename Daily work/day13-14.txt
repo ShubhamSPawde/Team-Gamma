@@ -1,0 +1,74 @@
+we define a function using def keyword and then call it whenever we need it in our whole code. Now instead of defining the function somewhere and calling it, we can use python's lambda functions so that we don't need to visit the function or make the tedious functions when needed
+the lambda functions can be defined in only a single line and is more efficient:
+eg=sum = lambda x,y : x + y so if we write print(sum(2,4)) it will print the sum,8
+
+the defination of the lambda function can be written as:-
+Lambda functions are anonymous functions that can be defined in a single line. 
+
+They're often used as arguments to higher-order functions like map, filter, and 
+reduce.
+Map
+Filter 
+Reduce
+
+the map,filter and reduce are as follows:
+
+Map:Applies a given function to each element of a collection, returning the results in a collection of the same type.
+Filter:Filters a subset of elements that meets a certain conditions.
+Reduce:Applies a function and an iterable to return a single value.
+
+1) Map:-
+It gets applied to a given function to each item in an iterable and returns a new iterable with the results.
+That's very difficult to understand, Here is the simple defination.
+the map applies a perticular function to the iterable and returns a output
+
+for example:
+numbers = [1, 2, 3, 4, 5]
+squared = list(map(lambda x: x**2, numbers))
+print(squared)
+in this the example we have the lambda function that makes the square of the nos. in numbers and returns it in list output:[1, 4, 9, 16, 25]
+
+2)Filter
+The filter function creates a new iterable containing only the items from the original iterable that satisfy a given condition (specified by a function).
+i.e the filter function filters the specific elements with the specific function that is given
+for example:
+numbers = [1, 2, 3, 4, 5]
+evens = list(filter(lambda x: x % 2 == 0, numbers))
+print(evens)
+this will print the elements from the numbers, but only the even numbers will be printed and not more, this is the work of the filter output:[2, 4]
+
+3)Reduce:
+It applies a given function to the elements of an iterable, accumulating the result as it goes. It's part of the functools module.
+i.e it reduces them into a single element, it applies the function to the elements
+cumulatively.
+
+for example:
+from functools import reduce
+numbers = [1, 2, 3, 4, 5]
+sum_of_numbers = reduce(lambda x, y: x + y, numbers)
+print(sum_of_numbers)
+it will apply the function addition to the elements of the numbers and then print the result as 15.
+
+Iterators:
+In Python, an iterator is an object that implements the iterator protocol, which consists of two methods:
+__iter()__
+and the __next()__
+
+iter() : This method initializes the iterator object. It is called when you create an iterator using the function.
+next() : This method is used to fetch the next element from the iterator. It raises a StopIteration exception when there are no more elements to return. 
+
+Common Uses of Iterators:
+iterate over a sequence.
+efficient memory usage.
+Custom iteration logic:
+
+
+for example:
+numbers = [1, 2, 3, 4, 5]
+numbers_iterator = iter(numbers)
+
+print(next(numbers_iterator))
+print(next(numbers_iterator))
+print(next(numbers_iterator))
+
+it will iter over the elements of the numbers and give you 1,2,3 as a result of the print statement.
