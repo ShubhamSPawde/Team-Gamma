@@ -1,0 +1,61 @@
+Classes And Objects foundation
+In Python, classes and objects are fundamental concepts in object-oriented programming (OOP). They allow you to model real-world entities with properties (attributes) and behaviors (methods).
+Objects:we can think as the class as the fundamental or the template for creating a objects 
+
+defining:
+You define a class using the class keyword, followed by the class name and a colon. Inside the class, you define attributes and methods.
+
+Attributes:
+Attributes are variables that hold data associated with the class or its objects. They represent the characteristics or properties of the object.
+
+Methods:
+Methods are functions defined within the class that define the actions or behaviors that objects of the class can perform.
+
+Objects:
+Instance: An object is an instance of a class. It is a concrete realization of the structure defined by the class.
+Creation: You create an object by calling the class name as if it were a function, passing any required arguments to the constructor method (__init__).
+Accessing attributes and methods: You can access an object's attributes and methods using dot notation.
+
+example:
+class Dog:
+  def __init__(self, name, breed):
+    self.name = name  
+    self.breed = breed  
+
+  def bark(self): 
+    print(f"{self.name} the {self.breed} barks!")
+
+def __init__(self, name, breed): this is a method 
+  self.name = name  : this are the attribtutes
+def bark(self): this is a method 
+
+we can create as many methods and atributes we want 
+
+
+
+
+Encapsulation,Inheritance,Polymorphism
+Key Points:
+Encapsulation:
+Classes encapsulate data and behavior, meaning they bundle them together into a single unit. This makes code easier to organize, manage, and reuse.
+Inheritance:
+Classes can inherit attributes and methods from other classes, allowing you to create hierarchies of classes.
+Polymorphism:
+Objects of different classes can be used interchangeably if they share the same interface (methods with the same names).
+
+
+
+Abstract base classes and Interfaces
+
+they are the abstraction mechanisms in object-oriented programming systems (OOPS) that help create maintainable and modular code
+
+Abstract class:
+They can be used when there is an "is-a" relationship between the base class and its subclasses or when there is a shared functionality  Abstract classes can have both abstract and implemented methods, and can define a common interface for a group of related classes. 
+for example:For example, multiple classes can inherit from the same abstract class, each providing their own unique implementation of the functions they inherit
+Abstract classes can also be faster than interfaces because they can provide method mplementations, which reduces the need for method lookups.
+
+Interfaces:
+Define a contract between a class and its users, or a set of methods that a class must implement. Interfaces can only have abstract methods, and cannot define any implementation. They offer a lightweight solution compared to inheritance, but have some limitations, such as the inability to inherit variables. 
+
+
+
