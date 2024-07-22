@@ -72,3 +72,66 @@ print(next(numbers_iterator))
 print(next(numbers_iterator))
 
 it will iter over the elements of the numbers and give you 1,2,3 as a result of the print statement.
+
+Generators:
+a generator is a special type of function that returns an iterator object, allowing 
+you to iterate over a sequence of values on-demand, rather than generating them all 
+at once.
+
+This makes generators memory-efficient, especially when dealing with large datasets.
+yield keyword:
+Instead of using the return keyword, generators use yield to produce a value. When 
+a generator function encounters a yield statement, it pauses execution and "yields" 
+the value. The function's state is saved, allowing it to resume from where it left 
+off when the next value is requested.
+
+Iterator object:
+Calling a generator function returns a generator object, which is an iterator. This 
+object can be used in a loop or with functions like next() to access the generated 
+values one at a time.
+for example:
+def square_numbers(n):
+    for i in range(n):
+        yield i ** 2
+
+squares = square_numbers(5)
+print(next(squares))
+print(nesxt(squares))
+
+it will print the squares as needed
+
+Common use cases:
+Processing large files:
+Generators are ideal for reading and processing large files line-by-line, as they 
+avoid loading the entire file into memory.
+Infinite sequences:
+Generators can represent infinite sequences of numbers or other data structures 
+that would be impossible to store in memory.
+Data pipelines:
+Generators can be chained together to create efficient data processing pipelines.
+
+Functools:
+The functools module in Python is part of the standard library and provides higher-order functions
+
+here are few uses of it:
+Decorators:it provides tools to create decorators easily like @wraps, which helps 
+preserve information about the wrapped function.
+
+Partial Functions:the partial function allows you to create a new function from an existing one by pre-filling some arguments.
+
+it also has more uses like: caching ,Reduce function etc..
+
+Itertools:
+it is a powerfull,usefull lib in python that provides us working with iterators it provides a number of functions that can help us to use the iteratos more efficiently
+
+
+the uses of the Itertools:
+Memory Efficiency:
+Iterators in itertools generate values on-the-fly, which means they don't store the entire sequence in memory. This makes them ideal for working with large datasets.
+Performance:
+The functions in itertools are implemented in C for speed, making them faster than equivalent solutions written in pure Python.
+Combinatorial Functions:
+itertools provides functions for generating permutations, combinations, and Cartesian products, which are commonly used in mathematics and computer science.
+
+and Infinite Iterators,Functional Programming etc....
+
