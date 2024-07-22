@@ -52,3 +52,77 @@
 # multi_numbers_lambda = reduce(lambda a, b: a * b, numbers)
 # print(multi_numbers_lambda)
 # Applications : Addition, Product, finding maximum of given numbers.
+
+# Iterators are objects which can be iterated upon. It is a tedious work to create an iterator, it must consists of 
+# __next__() , __iter__() , StopIteration…
+
+# To make our work easy, we can make use of generators. Generators are a special type of function that use the ‘yield’ keyword to 
+# return an iterator that may be iterated over, one value at a time.
+
+# Ex : We will iterate a list
+# list = [1, 2, 3, 4, 5]
+# iterator = iter(list)       # iter() converts the iterable into iterator
+# print(next(iterator))       # next() returns next item in an iterator
+# print(next(iterator))           Output : 1
+#                                                          2
+# To print all the elements in the list you need to use either the next() function as many times as number of elements present or use loops.
+# list = [1, 2, 3, 4, 5]                Output :  1
+# iterator = iter(list)                           2
+# for iterator in list:                           3
+#     print(iterator)                             4
+
+# One way to iterate all elements we can use print(list(iterator)) #Output : [1, 2, 3, 4, 5]
+# But when there is lot of data, then it will take long time to process then its better to use Generators.
+
+# A generator object does not return items instead it generate items on the go. They do not store their contents in the memory which an iterable does. 
+# Ex : 
+
+# def factors(x):                                                          def factors(x): 
+#   factor_list = [ ]                                                         for val in range(1, x+1):
+#   for value in range(1, x+1):                                                  if x % val == 0:
+#       if x % value == 0:                                                          yield val
+#           factor_list.append(value)
+#   return factor_list                                                    factors_20 = factors(20)  
+# print(factors(20))                                                      print(next(factors_20))
+# Output : [1, 2, 4, 5, 10, 20]                                           output : 1
+
+# Because of the use of yield keyword instead of return, the function is not exited after the run. Actually It created a generator object 
+# instead of traditional function which enables the state of the generator object to be tracked.
+# The yield keyword returns the function but remembers the state of its local variables.
+# A generator may be preferable when dealing with large sets of data since they do not store their contents in memory or when it is not 
+# necessary to implement an iterator. 
+
+# Functools Module provides higher-order functions which return other functions. They are useful when working with functions and callable objects.
+# Functions used in functools : 
+# 1.	functools.partial – used to create a new version of a function with some arguments fixed.
+# Ex : 
+# from functools import partial
+
+# def power(base, exponent):
+#       return base ** exponent
+
+# power_3 = partial(power, 3)
+# print(power_3(2))                Output : 9
+
+# 2.	functools.reduce
+# 3.	functools.Iru_cache
+# 4.	functools.wraps
+
+# Itertools Module provides functions for creating iterators for efficient looping. These tools are useful when working with 
+# complex iterators, large datasets.
+
+# Functions used in itertools : 
+# 1.	itertools.permutations : Generates all possible permutations of iterable.
+# Ex : from itertools import permutations
+#      nos = [1, 2, 3]
+#      Permut = list(permutations(nos))
+#      print(Permut)
+
+# 2.	itertools.chain – used to combine multiple iterables into single iterator.
+# 3.	itertools.cycle – used to cycle through an iterable indefinitely.
+# 4.	itertools.count – used to create an iterator that generates consecutive integers indefinitely.
+# 5.	itertools.slice – slices an iterator.
+# 6.	itertools.combinations – generate all possible combinations of a specified length from an iterable.
+# 7.	itertools.groupby – Group elements of an iterable based on a key function.
+
+ 
