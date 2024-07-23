@@ -1,0 +1,46 @@
+# Numpy provides efficient storage, better ways of handling data for processing. It is fast & easy to learn and Numpy uses 
+# relatively less memory to store data.
+#Declaration of Numpy array : arr = np.array([1, 2, 3, 4, 5])
+#                             print(arr)
+#ex : import numpy as np
+#     arr = np.array([1, 2, 3, 4, 5]) #This is 1-dimensional array
+#     print(arr)  #Output : [1, 2, 3, 4, 5]
+#     arr.shape   #displays number of rows & columns, here – (1, 5)
+#    arr.dtype   # dtype(‘int32’) or dtype(‘int64’)
+#   arr.size    #Displays the number of elements in the array – 5
+
+#ex: 
+#arr1 = np.array([[1, 2, 3], [4, 5, 6]])  #2-dimensional array
+#print(arr1)    #[[1 2 3]     
+#                 [4 5 6]]
+#print(arr1[0,2]) – ‘0’ indicates first row and ‘2’ indicates third column, output – 3
+#arr1.sum(axis = 0) – 0 indicates first column, addition of first column – 1 + 4 = 5
+#arr1.sum(axis = 1) – 1 indicates first row, addition of first row – 1 + 2 + 3 = 6
+#arr1.argmax() – gives the index number of largest number in the array – 5
+#arr1.max() – gives the largest number in the array – 6
+
+#ex : 
+#arr2 = np.array([[1, 2, 3], [4, 5, 6], [7, 8, 9]])
+#arr2.T – Transpose of matrix – [[1 4 7]
+#                                [2 5 8]
+#                                [3 6 9]]
+#arr2.ndim – number of dimensions/axes – 2
+#arr2.nbytes – Total bytes consumed 
+#if 32 bit – one element – 4 bytes, Total bytes consumed = 4 * 9 = 36
+#if 64 bit – one element – 8 bytes, Total bytes consumed = 8 * 9 = 72
+#np.count_nonzero(arr2) – number of elements which are non-zero – 6
+#arr2.sum() – addition of all elements of array – 45
+#arr2.ravel – array([1, 2, 3, 4, 5, 6, 7, 8, 9])
+#rng = np.arange(10) – [0 1 2 3 4 5 6 7 8 9]
+#print(np.zeros((2, 3))) –  prints an array of 2 rows, 3columns with all zeros in the array.   
+#            [[0. 0. 0.]
+#             [0. 0. 0.]]
+#np.sqrt(array name) – square root of each element of array.
+#arr1 + arr2, arr1 * arr2 – only when the order of the arrays is same.
+#np.where(array name > any number) – displays the index number of the element of the array which satisfies the specified condition.
+#Ex : arr = np.array([[1, 8, 2], [4, 5, 8], [9, 0, 1]])
+#     np.where(arr > 5) 
+#Elements at (0,1), (1,2), (2,0) are greater than 5.
+#Output : (array([0, 1, 2]), array([1, 2, 0]))
+#Mean – np.mean(array name), Median – np.median(array name), 
+#Standard deviation – np.std(array name), Correlation – np.corrcoef(arr1, arr2)
