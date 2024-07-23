@@ -1,0 +1,52 @@
+NUMPY:
+the numpy is a numerical python it is an open-source Python library that's used for scientific computing and data analysis. it is a general perpos librery that helps us perfoem complex numerical task on the array of the numbers it also provides us the method to create numpy 1D 2D 3D array that can be very usefull theare called as ndarray,can be up to 50 times faster than traditional Python lists.
+
+NumPy's features include:
+N-dimensional arrays: NumPy's powerful arrays speed up data processing.
+Functions: NumPy has a large library of functions that operate efficiently on arrays, including mathematical functions, linear algebra, Fourier transform, and random number capabilities.
+Interfacing: NumPy can be easily integrated with other Python packages and programming languages like C and C++. 
+
+
+there are various operations using the numpy array:
+import numpy as np
+arr1 = np.array([1, 2, 3, 4, 5])
+arr2 = np.zeros(5)
+arr3 = np.ones((2, 3))
+arr4 = np.random.rand(3, 2)
+
+np.zeros=prints the array of all zeors in a array
+np.ones=prints the array of all ones in a array
+np.random.rand=it will print the array of 2D and having 3 elements in each
+
+you can also make some maths operation on the array of numbers:
+arr1 = np.array([1, 2, 3])
+arr2 = np.array([4, 5, 6])
+add = arr1 + arr2
+sub = arr1 - arr2
+mul = arr1 * arr2
+div = arr1 / arr2
+
+in this each element of the arr1 gets add,sub,mul,div with element on the same index of the arr2.
+
+
+we also have some inbuild functions for the maths operations:
+arr = np.array([1, 2, 3, 4, 5])
+sum = np.sum(arr)
+mean = np.mean(arr)
+max = np.max(arr)
+min = np.min(arr)
+
+the functions are shown above will also help in add,sub,mul,div..
+
+arr = np.array([1, 2, 3, 4, 5])
+reshaped = arr.reshape(5, 1)
+transposed = arr.T
+flattened = arr.flatten()
+
+.reshape()=it will reshape the array into 5*1 shape
+
+.T = will make a transpose of the array
+
+.flatten()=will print the flattern array
+
+we can also perform some slicing operations on the array so that we can get only the required elements
