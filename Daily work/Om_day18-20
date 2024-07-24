@@ -1,0 +1,54 @@
+// Matplotlib is a comprehensive library for creating static, animated and interactive visualizations in python.
+
+// Example : fig, ax = plt.subplots()
+//                  ax.plot([10, 20, 30, 40], [12, 24, 15, 30])
+//                  plt.show()                  
+                                                                         
+// The figure is the whole plot you see.It keeps track of axes, titles, figure legends, colorbars and nested subfigures. 
+// subplots() are functions which create axes object inside figure, which can be added manually also.
+// An Axes is an Artist attached to a Figure that contains a region for plotting data, usually contains two or three axis objects.
+// Axis objects set the scale and limits and generate ticks and tickables.
+// Artist is everything visible on Figure like axes, axis objects which include text objects, Line2D objects, collection objects etc. 
+// Two ways of using Matplotlib : 
+// 1.	Object-oriented style – explicitly create figures and axes.
+// Ex : import matplotlib.pyplot as plt 
+//        import numpy as np
+//        x = np.linspace(0, 10, 100) #100 evenly spaced value from 0-10
+//        y = np.tan(x) #tan of each value in x
+//        fig, ax = plt.subplots()
+//        ax.plot(x, y)
+//        ax.set_xlabel(‘x axis’)
+//        ax.set_ylabel(‘y axis’)
+//        ax.set_title(‘A Graph’)
+//        plt.show()
+// 2.	Implicitly create and manage figures and axes, and use pyplot functions for plotting.
+// Ex :  Same as above after declaring x & y 
+//          plt.plot(x, y)
+//          plt.xlabel('x axis') 
+//          plt.ylabel('y axis') 
+//          plt.title('A Graph') 
+//          plt.show()
+
+// Techniques for customizing plots using with titles, labels and legends : 
+// Title – subject of the graph
+// Label – labels or gives name to x, y axes and many such things which need a description.
+// Legend – labels different element of the plot, which can help distinguish between multiple datasets or plot elements.
+
+// Ex : 
+// import matplotlib.pyplot as plt
+// import numpy as np
+
+// x = np.linspace(0, 10, 100)
+// y1 = np.sin(x)
+// y2 = np.cos(x)
+
+// plt.plot(x, y1, label='Sine Wave') #labeling legend y1
+// plt.plot(x, y2, label='Cosine Wave') #labeling legend y2
+
+// plt.title(‘Sine vs Cosine’) #this title  will be on top of the figure(subject of plot)
+// plt.xlabel('x axis') #labeling x axis
+// plt.ylabel('y axis') #labeling y axis
+// plt.legend() #enables addition of legend to distinguish between sine & cosine
+// plt.show() 
+// adding title, labels, legends make the plot more descriptive and understandable.
+
