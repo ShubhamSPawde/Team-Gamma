@@ -50,3 +50,79 @@ flattened = arr.flatten()
 .flatten()=will print the flattern array
 
 we can also perform some slicing operations on the array so that we can get only the required elements
+
+BROADCASTING in numpy:
+it is a very powerful feature in numpy which allows you ti perform arthemathic operations on the numpy array even if they are of different shapes you don't need to reshape() them
+It is also called as "stretching" or "broadcasting"
+
+Broadcasting process:
+The smaller array is conceptually replicated along the missing dimensions to match the shape of the larger array. This replication happens internally, without actually creating copies of the data, making it efficient.
+Example:
+import numpy as np
+a = np.array([1, 2, 3])
+print(a.shape)
+b = 2
+print(b.shape)         
+result = a + b
+print(result)
+output=[3,4,5]
+
+this is known as broadcasting:
+Efficiency
+Conciseness
+Flexibility
+
+VECTORIZATION:
+it is a technique in numpy that applies a operation on the whole array instead of appliying it by iterating over the array
+
+Benefits of Vectorization:
+Speed
+Conciseness 
+Efficiency
+
+Example:
+
+import numpy as np
+arr1 = np.array([1, 2, 3])
+arr2 = np.array([4, 5, 6])
+result = []
+for i in range(len(arr1)):
+    result.append(arr1[i] + arr2[i])
+print(result)
+
+OPERATIONS ON THE MULTIDIMENTIONAL ARRAY:
+
+1)Advanced slicong:
+code:array[r:c]
+i.e when we are slicing the ndarray we have to define the specific column and the row and hence we write the above code
+Example:
+arr = np.array([[1, 2, 3], [4, 5, 6], [7, 8, 9]])
+print(arr[[0, 1], [1, 2]]) 
+print(arr[arr > 5]) 
+
+in this we will get the 0th index row  and the 1st index column
+and the 
+
+2)Reshaping and Transposing:
+we can take the transpose of the and also rehape the array in certain shape that are accepted by that original array in numpy
+Example:
+arr = np.array([[1, 2, 3], [4, 5, 6]])
+print(arr.reshape(3, 2))
+print(arr.transpose())
+
+3)Linear Algebra Operations:
+NumPy offers powerful linear algebra capabilities through the np.linalg module. This includes matrix multiplication, solving linear equations, finding determinants, and much more.
+Example:
+a = np.array([[1, 2], [3, 4]])
+b = np.array([[5, 6], [7, 8]])
+print(np.dot(a, b)) 
+print(np.linalg.inv(a)) 
+
+4) Statistical Functions:
+numpy also provides numerous statistical functions for calculating mean, median, variance, standard deviation, correlation, and more.
+eg:
+arr = np.array([1, 2, 3, 4, 5])
+print(np.mean(arr))
+print(np.std(arr))
+
+5)Einstein Summation: it is also a good advanced operation
