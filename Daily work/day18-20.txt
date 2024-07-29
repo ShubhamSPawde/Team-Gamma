@@ -1,0 +1,70 @@
+**Matplotlib is a comprehensive library used in Python for creating static, animated, and interactive visualizations
+
+it allows us to plot the graphs from ranging from the simple line graphs to the more complex and diffucult graphs it is a very effective way of conveing the info that is hard to convey in data
+
+**A simple code in matplotlib is
+import matplotlib.pyplot as plt
+plt.figure()
+plt.plot([10,20,30,40],[12,34,45,56])
+plt.show()
+
+it will plot a graph that is sutiable for hte above code
+
+
+**Matplotlib provides a wide range of options to customize plots, including titles, labels, and legends. Here are a few techniques:
+
+1)plt.title():
+Sets the title of the plot. We can customize the font size, color, and position using arguments like fontsize, color.
+
+2)plt.xlabel() and plt.ylabel():
+Sets the labels for the x and y axes, respectively. You can customize these labels using the same arguments as plt.title().
+
+Legends:
+plt.legend():
+Adds a legend to the plot. We can customize the legend's location, appearance. We can also write legend=True if we want to give the graph
+
+ **Example :
+ plt.legend(['Cost','Price','Tax'],title="Index:",
+          loc="center left",
+          bbox_to_anchor=(1, 0, 0.5, 1))
+this is a simple code to add the lengends to the graph if we want to add them
+
+**Subplots:
+subplot(m,n,p): Creates a subplot in the pth position of an m-by-n grid.
+**Example:
+x = [10,20,30,40,50]
+y1 = [11,45,67,45,34]
+y2 = [12,14,54,65,67]
+
+subplot(2,1,1)
+plot(x,y1)
+subplot(2,1,2)
+plot(x,y2)
+
+It will just create 2 subplots as shown in the code
+
+**Advanced graphing techniques:
+Adding more customizations to the plots to make it look better:
+
+**Example:
+1)plt.bar(x,y,edgecolor='k',linewidth=2,legends=True,color='orange',figsize=(10,5),fontsize=15)
+2)plt.hist(x,bins=num,edgecolor='k',color='orange'etc....)
+3)plt.pie(totals, labels=totals.index, autopct='%1.1f%%', shadow=True, startangle=140, colors=['#ff9999', '#66b3ff', '#99ff99'], explode=[0.1, 0.1, 0.1])
+4)plt.scatter(x,y, marker='o', linestyle='-', color='b')
+ 
+
+this are some customizing techniques that we can use
+
+**3D Plots and Animations:
+We can also plot some 3D plots using matplotlib:
+**Example:
+[x,y,z] = sphere(50);
+figure;
+for i = 1:100
+  surf(x*cos(i),y*sin(i),z);
+  drawnow;
+  pause(0.01);
+end
+
+******Link for the interactive charts*******
+https://colab.research.google.com/drive/1Gmo2byXR9rWh_JBnp9K4BRrkKmhNh17D?usp=sharing
