@@ -52,3 +52,76 @@
 // plt.show() 
 // adding title, labels, legends make the plot more descriptive and understandable.
 
+// Besides creating axes object inside figure, subplot() function are also used to create multiple plots in a figure. 
+// Ex : 
+// import matplotlib.pyplot as plt
+// import numpy as np
+
+// Sector = ['IT', 'Pharma', 'FMCG', 'Banking', 'Energy']
+// Revenue = [5000, 2520, 3000, 1700, 4100]
+
+// Sector = ['IT', 'Pharma', 'FMCG', 'Banking', 'Energy']
+// Revenue = [5000, 2520, 3000, 1700, 4100]
+// plt.figure(figsize=(12,6))
+
+// plt.subplot(1,2,1)
+// plt.bar(Sector, Revenue, color='Orange', linewidth = 1.5)
+// plt.title('Sector vs Revenue')
+// plt.xlabel('Sector')
+// plt.ylabel('Revenue')
+
+// max_value = max(Revenue)
+// max_index = Revenue.index(max_value)
+// max_sector = Sector[max_index]
+
+// plt.annotate(f'Highest: {max_value}', 
+//              xy=(max_index, max_value), 
+//              xytext=(max_index, max_value + 500), 
+//              arrowprops=dict(facecolor='black', arrowstyle='->'),
+//              ha='center')
+
+// plt.subplot(1,2,2)
+// plt.pie(Revenue, labels=Sector, autopct='%1.1f%%')
+// plt.title('Sector vs Revenue')
+
+// plt.tight_layout()
+// plt.show()
+
+// Advance plotting techniques including adding text, using arrows, 3D graphs, etc.
+// Ex : 
+
+// import numpy as np
+// import matplotlib.pyplot as plt
+// from mpl_toolkits.mplot3d import Axes3D
+
+// _x = np.arange(4)
+// _y = np.arange(3)
+// _z = np.arange(6)
+
+// _xx, _yy, _zz = np.meshgrid(_x, _y, _z)
+// x, y, z = _xx.ravel(), _yy.ravel(), _zz.ravel()
+
+// top = x * y * z
+// bottom = np.zeros_like(top)
+// width = depth = height = 1
+
+// fig = plt.figure(figsize=(10, 7))
+// ax = fig.add_subplot(111, projection='3d')
+
+// ax.bar3d(x, y, bottom, width, depth, top, shade=True)
+
+// ax.set_xlabel('x axis')
+// ax.set_ylabel('y axis')
+// ax.set_zlabel('z axis')
+
+// ax.view_init(elev=20., azim=-35)
+
+// plt.title('3D Bar Plot')
+// plt.tight_layout()
+// plt.show()
+
+// Matplotlib provides several tools to create interactive plots that respond to user inputs, which enhances data visualization allowing 
+// users to explore data dynamically.
+// Key interactive elements include Sliders, buttons, check buttons, radio buttons, text boxes…
+
+// For various different plots : https://colab.research.google.com/drive/1iVBXgUH6CHcWeGFfCT1oRU1vp749cYe0?usp=sharing
