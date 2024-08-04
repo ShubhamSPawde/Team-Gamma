@@ -1,0 +1,10 @@
+Manim is a free, open-source Python library for creating interactive  animations, originally developed by Grant Sanderson of 3Blue1Brown, a math YouTuber. Manim can be used to create animations for math explanations,graphs and much more by juct some piece of code which is mesmerizing.
+
+Some examples of animations that can be created with Manim include: Creating and hiding objects,converting shapes into other shapes etc.....
+
+It can also be used for more general purposes, such as creating scientific animations. 
+
+
+It is very usefull as to create some of the difficult graphs we can use it, which in some cases are very hard to make.
+
+I have attached a simple code to create a animation in manim.
